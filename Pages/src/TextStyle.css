@@ -1,4 +1,16 @@
 .header {
+    font-size: 17px;
+    font-family: Arial;
+}
+
+.article {
     font-size: 12px;
     font-family: Arial;
+    display: inline;
+}
+
+.article-content {
+    font-size: 12px;
+    font-family: Arial;
+    white-space: nowrap;
 }
