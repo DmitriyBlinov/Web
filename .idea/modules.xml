@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSSText/CSSText.iml" filepath="$PROJECT_DIR$/CSSText/CSSText.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Pages/Pages.iml" filepath="$PROJECT_DIR$/Pages/Pages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HTML/HTML.iml" filepath="$PROJECT_DIR$/HTML/HTML.iml" />
       <module fileurl="file://$PROJECT_DIR$/Web.iml" filepath="$PROJECT_DIR$/Web.iml" />
     </modules>
   </component>
