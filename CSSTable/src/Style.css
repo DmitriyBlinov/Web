@@ -1,25 +1,25 @@
-table {
-    border-collapse: collapse;
+.employees {
     font-family: Calibri, sans-serif;
     font-size: 24px;
-    border-color: #d9d9d9;
+    max-width: 80%;
+    min-width: 70%;
 }
 
-th {
+.employees th, td {
+    border: 1px solid #d9d9d9;
+    padding: 0 30px 0 10px;
+    height: 40px;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.employees th {
     background-color: #3498db;
     color: white;
     font-weight: normal;
-    height: 40px;
     text-align: left;
-    padding-left: 10px;
 }
 
-td {
-    padding-left: 10px;
-    padding-right: 80px;
-    height: 40px;
-}
-
-.odd {
+.employees .odd {
     background-color: #eeeeee;
 }
