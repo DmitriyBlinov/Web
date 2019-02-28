@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSSTable/CSSTable.iml" filepath="$PROJECT_DIR$/CSSTable/CSSTable.iml" />
       <module fileurl="file://$PROJECT_DIR$/CSSText/CSSText.iml" filepath="$PROJECT_DIR$/CSSText/CSSText.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CssForm/CssForm.iml" filepath="$PROJECT_DIR$/CssForm/CssForm.iml" />
       <module fileurl="file://$PROJECT_DIR$/HTML/HTML.iml" filepath="$PROJECT_DIR$/HTML/HTML.iml" />
       <module fileurl="file://$PROJECT_DIR$/Web.iml" filepath="$PROJECT_DIR$/Web.iml" />
     </modules>

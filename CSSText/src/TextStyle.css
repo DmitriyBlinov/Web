@@ -6,6 +6,8 @@ body {
     margin-top: 7px;
     margin-left: 12px;
     text-align: justify;
+    width: 800px;
+    max-width: 70%;
 }
 
 .main-info {
@@ -22,14 +24,12 @@ body {
     margin: 1px 10px 10px 1px;
 }
 
-.content {
+.content, .crossed {
     color: #676565;
     font-weight: normal;
 }
 
 .crossed {
-    color: #676565;
-    font-weight: normal;
     text-decoration: line-through;
 }
 

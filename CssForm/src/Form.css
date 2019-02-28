@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, serif;
+}
+form {
+    background-color: antiquewhite;
+    width: 500px;
+    max-width: 50%;
+    padding: 15px 20px 15px 20px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+label[for="first-form"] {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0 5px 0;
+
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="button"] {
+    border: none;
+    background: lightskyblue;
+    font-weight: bold;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.send-request {
+    width: 130px;
+    margin-left: auto;
+}
+
+input[type="button"]:hover {
+    background: black;
+}
