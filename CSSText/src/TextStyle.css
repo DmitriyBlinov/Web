@@ -5,30 +5,35 @@ body {
     font-size: 17px;
     margin-top: 7px;
     margin-left: 12px;
+    text-align: justify;
 }
 
-div {
+.main-info {
     margin-top: 15px;
 }
 
-p {
-    margin: 1px 10px 7px 1px;
-}
-
 .header {
-    font-size: 29px;
-
+    font-size: 27px;
 }
 
 .article {
     font-weight: bold;
     color: #378DB2;
+    margin: 1px 10px 10px 1px;
+}
+
+.content {
+    color: #676565;
+    font-weight: normal;
 }
 
 .crossed {
+    color: #676565;
+    font-weight: normal;
     text-decoration: line-through;
 }
 
 .info {
     text-indent: 15px;
+    margin-top: 10px;
 }
