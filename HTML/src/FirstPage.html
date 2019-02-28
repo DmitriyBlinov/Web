@@ -6,24 +6,33 @@
 </head>
 <body>
 <div>
-    <input type="text"/>
+    <label for="first-text">Введите текст: </label>
+    <input id="first-text" type="text"/>
 </div>
 <br/>
 <div>
-    <textarea></textarea>
+    <label for="first-textarea">Введите текст: </label><br/>
+    <textarea id="first-textarea"></textarea>
 </div>
 <br/>
 <div>
-    <input type="checkbox" name="Choice"> 1
-    <input type="checkbox" name="Choice"> 2
-    <input type="checkbox" name="Choice"> 3
-    <input type="checkbox" name="Choice"> 4
+    <input id="1" type="checkbox" name="Choice">
+    <label for="1">1</label>
+    <input id="2" type="checkbox" name="Choice">
+    <label for="2">2</label>
+    <input id="3" type="checkbox" name="Choice">
+    <label for="3">3</label>
+    <input id="4" type="checkbox" name="Choice">
+    <label for="4">4</label>
 </div>
 <br/>
 <div>
-    <input checked="checked" type="radio" value="Один" name="myRadio"> Один
-    <input type="radio" value="Два" name="myRadio"> Два
-    <input type="radio" value="Три" name="myRadio"> Три
+    <input id="radio1" checked="checked" type="radio" value="Один" name="myRadio">
+    <label for="radio1">Один</label>
+    <input id="radio2" type="radio" value="Два" name="myRadio">
+    <label for="radio2">Два</label>
+    <input id="radio3" type="radio" value="Три" name="myRadio">
+    <label for="radio3">Три</label>
 </div>
 <br/>
 <div>
@@ -44,6 +53,6 @@
     </select>
 </div>
 <br/>
-<input value="Перейти" type="button" onclick="location.href='http://localhost:63342/HTML/SecondPage.html'">
+<input value="Перейти" type="button" onclick="location.href='SecondPage.html'">
 </body>
 </html>
