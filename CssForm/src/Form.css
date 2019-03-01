@@ -1,38 +1,47 @@
-body {
+.form-request {
     font-family: Arial, serif;
+    font-size: 14px;
+    color: dimgrey;
+    font-weight: bold;
 }
-form {
+
+form[id="first-form"] {
     background-color: antiquewhite;
-    width: 500px;
+    width: 700px;
     max-width: 50%;
     padding: 15px 20px 15px 20px;
-    font-size: 15px;
     margin-top: 5px;
 }
 
 label[for="first-form"] {
     padding-left: 20px;
-    font-weight: bold;
+    font-size: 20px;
 }
 
-label {
-    font-weight: bold;
+.article {
+    padding-bottom: 10px;
 }
 
-input[type="text"], textarea {
+input[type="text"], textarea[id="comment"] {
     width: 100%;
     box-sizing: border-box;
     margin: 5px 0 5px 0;
-
+    padding: 5px 10px 5px 10px;
+    outline-color: dimgrey;
 }
 
-textarea {
+textarea[id="comment"] {
     resize: vertical;
+    font-family: Arial, serif;
 }
 
-input[type="button"] {
+.help-sign {
+    font-weight: normal;
+}
+
+input[class="send-request"] {
     border: none;
-    background: lightskyblue;
+    background: cadetblue;
     font-weight: bold;
     color: white;
     height: 30px;
@@ -40,11 +49,11 @@ input[type="button"] {
     outline: none;
 }
 
+input[class="send-request"]:hover {
+    background: darkcyan;
+}
+
 .send-request {
     width: 130px;
     margin-left: auto;
-}
-
-input[type="button"]:hover {
-    background: black;
 }
