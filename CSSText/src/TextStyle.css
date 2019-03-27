@@ -7,12 +7,12 @@ body {
     margin-left: 12px;
     margin-right: 12px;
     text-align: justify;
-    width: 800px;
-    max-width: 100%;
 }
 
 .main-info {
     margin-top: 15px;
+    width: 800px;
+    max-width: 100%;
 }
 
 .header {
