@@ -12,7 +12,7 @@ console.log(list.slice(0, 5));
 console.log(list.slice(list.length - 5));
 
 //Найдите сумму четных чисел в массиве
-var sum = list.reduce (function (sum, element) {
+var sum = list.reduce(function (sum, element) {
     if (element % 2 === 0) {
         return sum + element;
     } else {

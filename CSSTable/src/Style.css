@@ -1,26 +1,22 @@
-.wrap-table {
+.employees {
+    width: 45%;
     max-width: 100%;
-    width: 860px;
 }
 
-.employees {
+.employees td, th {
     font-family: Calibri, sans-serif;
     font-size: 24px;
-}
-
-.employees th, td {
     border: 1px solid #d9d9d9;
-    padding: 10px 55px 10px 12px;
+    padding: 10px 12px;
     vertical-align: middle;
 }
 
 .employees th {
     background-color: #3498db;
     color: white;
-    font-weight: normal;
     text-align: left;
 }
 
-.employees .odd {
+.employees tr:nth-child(odd) {
     background-color: #eeeeee;
 }
