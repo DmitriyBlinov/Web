@@ -22,32 +22,23 @@ var countries = [
     }
 ];
 
-var maxLength = 0;
-
-function isMax(element) {
-
+var temp = {};
+for (var i = 0; i < countries.length; i++) {
+    temp[countries[i].name] = calculateSum(countries[i]);
 }
 
-var maxCitiesCountry = countries.map(function findMax(element, index, array) {
-    element["cities"].length;
-});
-
-var maximum = countries.find(getMaxValue(countries));
-
-function getMaxValue(countries) {
-    var max = countries[0].name;
-    for (var i = 1; i < countries.length; i++) {
-        if (max.cities.length < countries[i].cities.length) {
-            max = countries[i].name;
-        }
+function calculateSum (array) {
+    var sum = 0;
+    for (var j = 0; j < array.cities.length; j++) {
+        sum += array.cities[j].population;
     }
-    return max;
+    return sum;
 }
 
+console.log(temp);
 /*
 for(var i = 0; i < countries.length; i++) {
     if (countries[i].cities.length > maxLength) {
         maxLength = countries[i].cities.length;
     }
 }*/
-console.log(maximum);
