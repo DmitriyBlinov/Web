@@ -14,7 +14,7 @@ var sum = list.reduce(function (sum, element) {
     } else {
         return sum;
     }
-});
+}, 0);
 console.log("Сумма четных: " + sum);
 
 
@@ -29,8 +29,7 @@ function fillList(length, list) {
 
 var powList = bigList.filter(function (item) {
     return item % 2 === 0;
-});
-powList.map(function (value) {
+}).map(function (value) {
     return Math.pow(value, 2);
 });
 console.log("Квадраты четных: " + powList);
