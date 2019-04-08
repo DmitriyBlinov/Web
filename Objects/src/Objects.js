@@ -22,8 +22,6 @@ var countries = [
     }
 ];
 
-var maxCities = findMaxLength(countries, "cities");
-
 function findMaxLength(array, subArray) {
     var maxLength = 0;
     for (var i = 0; i < array.length; i++) {
@@ -35,7 +33,7 @@ function findMaxLength(array, subArray) {
 }
 
 var maxCitiesCountries = countries.filter(function (item) {
-    return item["cities"].length >= maxCities;
+    return item["cities"].length >= findMaxLength(countries, "cities");
 });
 
 console.log(maxCitiesCountries);
