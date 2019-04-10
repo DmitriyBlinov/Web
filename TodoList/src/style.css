@@ -1,0 +1,33 @@
+.wrap-form {
+    font-family: Arial, serif;
+    font-size: 16px;
+    color: dimgrey;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    background-color: antiquewhite;
+    padding: 20px 20px 15px 20px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.new-line {
+    margin-bottom: 20px;
+}
+
+.list li {
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.list button {
+    border: none;
+    background: #378CB1;
+    font-weight: bold;
+    color: white;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+    width: 60px;
+    margin-left: auto;
+}

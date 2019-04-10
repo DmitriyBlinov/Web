@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (text === "") {
             return;
         }
-
         var li = document.createElement("li");
         li.innerHTML = "<span></span>\
        <button type='button'>X</button>\
@@ -20,11 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
             list.removeChild(li);
         });
         li.children[2].addEventListener("click", function () {
+            //TODO редактирование
             var temp = document.createElement("input");
-            temp.setAttribute('type', 'text');
-            temp.setAttribute('value', li.children[0].innerText);
-            li.children[0].innerText = "";
-            li.children[0].appendChild(temp);
+            temp.setAttribute("type", "text");
+            temp.setAttribute("value", li.children[0].innerText);
+
+            function removeChildren(li) {
+                while (li.lastChild) {
+                    li.removeChild(li.lastChild);
+                }
+            }
+
+            removeChildren(li);
+
+            li.appendChild(temp);
+            li.innerHTML = "<span></span>\
+            <button type='button'>X</button>\
+            \<button type='button'>Edit</button>";
+            li.children[0].innerText = text;
+            li.children[1].addEventListener("click", function () {
+                list.removeChild(li);
+            });
+
         });
 
         list.appendChild(li);
