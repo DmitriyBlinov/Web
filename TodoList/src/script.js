@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (text === "") {
             return;
         }
+
         var li = document.createElement("li");
         li.innerHTML = "<span></span>\
        <button type='button'>X</button>\
