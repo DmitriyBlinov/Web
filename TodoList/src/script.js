@@ -24,23 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             temp.setAttribute("type", "text");
             temp.setAttribute("value", li.children[0].innerText);
 
-            function removeChildren(li) {
-                while (li.lastChild) {
-                    li.removeChild(li.lastChild);
-                }
-            }
-
-            removeChildren(li);
-
-            li.appendChild(temp);
-            li.innerHTML = "<span></span>\
-            <button type='button'>X</button>\
-            \<button type='button'>Edit</button>";
-            li.children[0].innerText = text;
-            li.children[1].addEventListener("click", function () {
-                list.removeChild(li);
-            });
-
+            li.children[0].innerText = "";
+            li.children[0].appendChild(temp);
         });
 
         list.appendChild(li);
