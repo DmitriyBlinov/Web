@@ -15,68 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type='button'>X</button>\
         \<button type='button'>Edit</button>";
         li.children[0].innerText = text;
-        li.children[1].addEventListener("click", function () {
-            list.removeChild(li);
-        });
-        li.children[2].addEventListener("click", function () {
-            //TODO редактирование
-            var tempText = li.children[0].innerText;
-            li.innerHTML = "<input type='text' />\
-            <button type='button'>Decline</button>\
-            \<button type='button'>Save</button>";
-            li.children[0].value = tempText;
-            li.children[1].addEventListener("click", function () {
-                li.innerHTML = "<span></span>\
-                <button type='button'>X</button>\
-                \<button type='button'>Edit</button>";
-                li.children[0].innerText = text;
-                li.children[1].addEventListener("click", function () {
-                    list.removeChild(li);
-                });
-                li.children[2].addEventListener("click", function () {
-                    var tempText = li.children[0].innerText;
-                    li.innerHTML = "<input type='text' />\
-                    <button type='button'>Decline</button>\
-                    \<button type='button'>Save</button>";
-                    li.children[0].value = tempText;
-                    li.children[1].addEventListener("click", function () {
-                        li.innerHTML = "<span></span>\
-                        <button type='button'>X</button>\
-                        \<button type='button'>Edit</button>";
-                        li.children[0].innerText = text;
-                        li.children[1].addEventListener("click", function () {
-                            list.removeChild(li);
-                        });
-                    })
-                });
-            });
-            li.children[2].addEventListener("click", function () {
-                var tempText = li.children[0].value;
-                li.innerHTML = "<span></span>\
-                <button type='button'>X</button>\
-                \<button type='button'>Edit</button>";
-                li.children[0].innerText = tempText;
-                li.children[1].addEventListener("click", function () {
-                    list.removeChild(li);
-                });
-                li.children[2].addEventListener("click", function () {
-                    var tempText = li.children[0].innerText;
-                    li.innerHTML = "<input type='text' />\
-                    <button type='button'>Decline</button>\
-                    \<button type='button'>Save</button>";
-                    li.children[0].value = tempText;
-                    li.children[1].addEventListener("click", function () {
-                        li.innerHTML = "<span></span>\
-                        <button type='button'>X</button>\
-                        \<button type='button'>Edit</button>";
-                        li.children[0].innerText = text;
-                        li.children[1].addEventListener("click", function () {
-                            list.removeChild(li);
-                        });
-                    })
-                });
-            })
-        });
+        li.children[1].addEventListener("click", deleteLine);
+        li.children[2].addEventListener("click", edit);
 
         function deleteLine() {
             list.removeChild(li);
@@ -93,17 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function decline() {
-            var tempText = li.children[0].value;
             li.innerHTML = "<span></span>\
                 <button type='button'>X</button>\
                 \<button type='button'>Edit</button>";
-            li.children[0].innerText = tempText;
+            li.children[0].innerText = text;
             li.children[1].addEventListener("click", deleteLine);
             li.children[2].addEventListener("click", edit);
         }
 
         function save() {
             var tempText = li.children[0].value;
+            text = li.children[0].value;
             li.innerHTML = "<span></span>\
                 <button type='button'>X</button>\
                 \<button type='button'>Edit</button>";
@@ -111,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
             li.children[1].addEventListener("click", deleteLine);
             li.children[2].addEventListener("click", edit);
         }
-
         list.appendChild(li);
         newTextField.value = "";
     });
