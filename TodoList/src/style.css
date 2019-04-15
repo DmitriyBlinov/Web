@@ -2,8 +2,8 @@
     font-family: Arial, serif;
     font-size: 16px;
     color: dimgrey;
-    width: 900px;
-    height: 400px;
+    width: max-content;
+    height: max-content;
     max-width: 100%;
     background-color: antiquewhite;
     padding: 20px 20px 15px 20px;
@@ -30,4 +30,8 @@
     outline: none;
     width: 60px;
     margin-left: auto;
+}
+
+.title {
+    margin-bottom: 20px;
 }

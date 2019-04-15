@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         li.innerHTML = "<span></span>\
         <button type='button'>X</button>\
         \<button type='button'>Edit</button>";
-        li.children[0].innerText = text;
+        li.children[0].innerText = "• " + text;
         li.children[1].addEventListener("click", deleteLine);
         li.children[2].addEventListener("click", edit);
 
