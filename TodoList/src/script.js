@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             li.children[1].addEventListener("click", deleteLine);
             li.children[2].addEventListener("click", edit);
         }
+
         list.appendChild(li);
         newTextField.value = "";
     });
