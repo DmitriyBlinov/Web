@@ -22,8 +22,6 @@ var countries = [
     }
 ];
 
-var maxCities = findMaxLength(countries, "cities");
-
 function findMaxLength(array, subArray) {
     var maxLength = 0;
     for (var i = 0; i < array.length; i++) {
@@ -34,16 +32,13 @@ function findMaxLength(array, subArray) {
     return maxLength;
 }
 
+var maxCities = findMaxLength(countries, "cities");
+
 var maxCitiesCountries = countries.filter(function (item) {
-    return item["cities"].length >= maxCities;
+    return item.cities.length >= maxCities;
 });
 
 console.log(maxCitiesCountries);
-
-var countriesPopulation = {};
-for (var i = 0; i < countries.length; i++) {
-    countriesPopulation[countries[i].name] = calculateSum(countries[i].cities, "population");
-}
 
 function calculateSum(array, key) {
     var sum = 0;
@@ -53,4 +48,16 @@ function calculateSum(array, key) {
     return sum;
 }
 
+var countriesPopulation = {};
+
+for (var i = 0; i < countries.length; i++) {
+    countriesPopulation[countries[i].name] = calculateSum(countries[i].cities, "population");
+}
+
 console.log(countriesPopulation);
+
+var countriesPopulations = countries.map(function(item) {
+
+});
+
+console.log(countriesPopulations);
