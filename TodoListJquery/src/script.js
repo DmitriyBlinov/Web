@@ -5,27 +5,29 @@ $(document).ready(function () {
     var list = $(".list");
 
     var createButton = $(".create");
-    createButton.addEventListener("click", function () {
-        var text = newTextField.value;
+    createButton.click(function () {
+        var text = newTextField.val();
         if (text === "") {
             return;
         }
 
-        var li = document.createElement("li");
+        var li = $("<li>");
         createBasicLi(text);
+        var children = li.children();
 
         function deleteLine() {
-            list.removeChild(li);
+            li.remove();
         }
 
         function edit() {
-            var tempText = li.children[0].innerText;
-            li.innerHTML = "<input type='text' />\
+            var tempText = children.eq(0).text();
+            li.html("<input type='text' />\
             <button type='button'>Decline</button>\
-            \<button type='button'>Save</button>";
-            li.children[0].value = tempText;
-            li.children[1].addEventListener("click", decline);
-            li.children[2].addEventListener("click", save);
+            \<button type='button'>Save</button>");
+            children = li.children();
+            children.eq(0).val(tempText);
+            children.eq(1).click(decline);
+            children.eq(2).click(save);
         }
 
         function decline() {
@@ -33,21 +35,22 @@ $(document).ready(function () {
         }
 
         function save() {
-            var tempText = li.children[0].value;
-            text = li.children[0].value;
+            var tempText = children.eq(0).val();
+            text = children.eq(0).val();
             createBasicLi(tempText);
         }
 
         function createBasicLi(text) {
-            li.innerHTML = "<span></span>\
+            li.html("<span></span>\
                 <button type='button'>X</button>\
-                \<button type='button'>Edit</button>";
-            li.children[0].innerText = text;
-            li.children[1].addEventListener("click", deleteLine);
-            li.children[2].addEventListener("click", edit);
+                <button type='button'>Edit</button>");
+            children = li.children();
+            children.eq(0).text(text);
+            children.eq(1).click(deleteLine);
+            children.eq(2).click(edit);
         }
 
-        list.appendChild(li);
-        newTextField.value = "";
+        list.append(li);
+        newTextField.val("");
     });
 });
